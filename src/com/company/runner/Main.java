@@ -1,6 +1,8 @@
-package com.company;
+package runner;
 
+import algoritm.SortAlgorithms;
 import java.util.Random;
+
 
 public class Main {
 

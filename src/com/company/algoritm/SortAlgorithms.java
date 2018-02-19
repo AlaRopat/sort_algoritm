@@ -1,4 +1,4 @@
-package com.company;
+package algoritm;
 
 public class SortAlgorithms {
 
@@ -36,10 +36,12 @@ public class SortAlgorithms {
   }
 
 
+
   public static void swap(int[] arr, int i, int j) {
     int temp = arr[i];
     arr[i] = arr[j];
     arr[j] = temp;
   }
+
 
 }
