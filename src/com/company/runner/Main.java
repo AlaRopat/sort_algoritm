@@ -4,6 +4,7 @@ package runner;
 import algoritm.SortAlgorithm;
 import algoritm.impl.BubbleSort;
 import algoritm.impl.CocktailSort;
+import algoritm.impl.PermutationSort;
 import algoritm.impl.QuickSort;
 import java.util.Random;
 
@@ -19,6 +20,8 @@ public class Main {
     printArray("Cocktail sort: ", cocktailSort.sort(getArray()));
     SortAlgorithm quickSort = new QuickSort();
     printArray("Quick sort: ", quickSort.sort(getArray()));
+    SortAlgorithm permutationSort = new PermutationSort();
+    printArray("Permutation Sort: ", permutationSort.sort(getArray()));
   }
 
   private static void printArray(String message, int[] arr) {
