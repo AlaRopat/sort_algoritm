@@ -10,6 +10,11 @@ public class QuickSort implements SortAlgorithm {
 		return arr;
 	}
 
+	@Override
+	public double getComplexity(int n) {
+		return (n * lg(n) / Math.pow(10, 6)) * 1000;
+	}
+
 	private void quickSort(int[] arr, int b, int e) {
 		if (b >= e) {
 			return;
@@ -34,5 +39,9 @@ public class QuickSort implements SortAlgorithm {
 		}
 		quickSort(arr, b, root);
 		quickSort(arr, root + 1, e);
+	}
+
+	private double lg(double x) {
+		return Math.log(x) / Math.log(2.0);
 	}
 }

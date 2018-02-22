@@ -14,6 +14,11 @@ public class PermutationSort implements SortAlgorithm {
 		return arr;
 	}
 
+	@Override
+	public double getComplexity(int n) {
+		return (n * factorial(n) / Math.pow(10, 6)) * 1000;
+	}
+
 	private boolean isSorted(int[] a) {
 		for (int i = a.length - 1; i > 0; i--) {
 			if (a[i] < a[i - 1]) {
@@ -21,5 +26,13 @@ public class PermutationSort implements SortAlgorithm {
 			}
 		}
 		return true;
+	}
+
+	public long factorial(int N) {
+		long multi = 1;
+		for (int i = 1; i <= N; i++) {
+			multi = multi * i;
+		}
+		return multi;
 	}
 }

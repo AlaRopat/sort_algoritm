@@ -25,4 +25,9 @@ public class CocktailSort implements SortAlgorithm {
 		}
 		return arr;
 	}
+
+	@Override
+	public double getComplexity(int n) {
+		return (Math.pow(n, 2) / Math.pow(10, 6)) * 1000;
+	}
 }
